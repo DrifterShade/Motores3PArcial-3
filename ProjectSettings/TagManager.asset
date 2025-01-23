@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Collectable
+  - area1
+  - area2
   layers:
   - Default
   - TransparentFX
