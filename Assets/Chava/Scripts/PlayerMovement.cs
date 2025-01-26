@@ -19,7 +19,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Movement();
         // Animation();
-        CheckDirection();
         attack.attackDirection(moveDirection);
     }
 

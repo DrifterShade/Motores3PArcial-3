@@ -5,7 +5,7 @@ using TMPro;
 
 public class CollectableManager : MonoBehaviour
 {
-    [SerializeField] private int currentCollectables;
+    [SerializeField] public int currentCollectables;
     [SerializeField] private TextMeshProUGUI TMProCurrentCollectables;
 
 

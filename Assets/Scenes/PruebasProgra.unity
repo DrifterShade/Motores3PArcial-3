@@ -360,6 +360,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d15d2993390ea7a4881db86f773f6e2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &157089719
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 157089721}
+  - component: {fileID: 157089720}
+  m_Layer: 0
+  m_Name: GameDataController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &157089720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157089719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75895c9da25cbea4183815821da42654, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  saveFile: 
+  gameData:
+    position: {x: 0, y: 0, z: 0}
+    healthPlayer: 0
+    currentCollectables: 0
+--- !u!4 &157089721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 157089719}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.20449364, y: -0.23988242, z: -0.043031983}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &408276431
 GameObject:
   m_ObjectHideFlags: 0
@@ -771,9 +821,10 @@ GameObject:
   - component: {fileID: 1975649476}
   - component: {fileID: 1975649481}
   - component: {fileID: 1975649482}
+  - component: {fileID: 1975649483}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -955,6 +1006,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentCollectables: 0
   TMProCurrentCollectables: {fileID: 408276433}
+--- !u!114 &1975649483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1975649475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11bc18c56c3a3054188f6d88dcf4392d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHealth: 3
+  maxHealth: 0
 --- !u!1 &1999895954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,3 +1160,4 @@ SceneRoots:
   - {fileID: 1999895957}
   - {fileID: 1930035369}
   - {fileID: 1233187850}
+  - {fileID: 157089721}
