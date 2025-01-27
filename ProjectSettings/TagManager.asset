@@ -9,6 +9,8 @@ TagManager:
   - Enemy
   - Collectable
   - Checkpoint
+  - area3
+  - area1Right
   layers:
   - Default
   - TransparentFX

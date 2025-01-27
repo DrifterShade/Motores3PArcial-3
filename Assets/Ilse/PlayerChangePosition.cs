@@ -12,13 +12,27 @@ public class PlayerChangePosition : MonoBehaviour
    {
     if (collision.gameObject.tag == "area1")
     {
-        cam.transform.position = new Vector3(0,1.03f,-10);
+        cam.transform.position = new Vector3(0,-0.53f,-10);
         this.transform.position = new Vector3(-1.15f,-2.51f,0);
     }
     if (collision.gameObject.tag == "area2")
     {
-        cam.transform.position = new Vector3(0,-10.14f,-10);
-         this.transform.position = new Vector3(-0.34f,-6.61f,0);
+        cam.transform.position = new Vector3(0,-11.79f,-10);
+         this.transform.position = new Vector3(2.41f,-7.6f,0);
+
+    }
+
+     if (collision.gameObject.tag == "area3")
+    {
+        cam.transform.position = new Vector3(19.19f,-0.04f,-10);
+         this.transform.position = new Vector3(11.98f,2.94f,0);
+
+    }
+
+      if (collision.gameObject.tag == "area1Right")
+    {
+         cam.transform.position = new Vector3(0,-0.53f,-10);
+         this.transform.position = new Vector3(7.34f,2.4f,0);
 
     }
    }
