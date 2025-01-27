@@ -11,6 +11,10 @@ TagManager:
   - Checkpoint
   - area3
   - area1Right
+  - cup
+  - cdown
+  - downm1
+  - upm1
   layers:
   - Default
   - TransparentFX
