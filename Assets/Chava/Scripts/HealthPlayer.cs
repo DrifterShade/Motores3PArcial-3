@@ -1,17 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthPlayer : MonoBehaviour
 {
 
     [SerializeField] public int currentHealth;
     [SerializeField] private int maxHealth;
+    [SerializeField] private RawImage[] hearts;
 
     private void Update()
     {
         checkDeath();
-        healthUI();
+        UpdateHealthUI();
     }
 
     public void takeDamage()
@@ -33,19 +35,34 @@ public class HealthPlayer : MonoBehaviour
         //Aqui va lo que queramos que pase cuando muera, encender menus, destruir al player, etc
     }
 
-    private void healthUI()
+    private void UpdateHealthUI()
     {
-        switch (currentHealth)
+        // Recorremos el array de corazones y desactivamos según la salud actual.
+        for (int i = 0; i < hearts.Length; i++)
         {
-            case 3:
-                break;
-            case 2:
-                break;
-            case 1:
-                break;
-            case 0:
-                break;
+            if (i < currentHealth)
+            {
+                hearts[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                hearts[i].gameObject.SetActive(false); 
+            }
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Enemigo");
+            takeDamage();
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        
     }
 
 }

@@ -33,7 +33,7 @@ public class GameDataController : MonoBehaviour
         }
     }
 
-    private void LoadData()
+    public void LoadData()
     {
         if (File.Exists(saveFile))
         {
@@ -51,7 +51,7 @@ public class GameDataController : MonoBehaviour
         }
     }
 
-    private void SaveData()
+    public void SaveData()
     {
         GameData newData = new GameData()
         {
