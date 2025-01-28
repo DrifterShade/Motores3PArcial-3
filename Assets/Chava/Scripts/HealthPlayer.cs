@@ -10,6 +10,10 @@ public class HealthPlayer : MonoBehaviour
     [SerializeField] private int maxHealth;
     [SerializeField] private RawImage[] hearts;
 
+        [SerializeField]  private GameObject derrotaui;
+
+    
+
     private void Update()
     {
         checkDeath();
@@ -32,12 +36,13 @@ public class HealthPlayer : MonoBehaviour
     private void death()
     {
         Debug.Log("Fallecido");
+        derrotaui.SetActive(true);
         //Aqui va lo que queramos que pase cuando muera, encender menus, destruir al player, etc
     }
 
     private void UpdateHealthUI()
     {
-        // Recorremos el array de corazones y desactivamos según la salud actual.
+        // Recorremos el array de corazones y desactivamos segï¿½n la salud actual.
         for (int i = 0; i < hearts.Length; i++)
         {
             if (i < currentHealth)

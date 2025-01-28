@@ -9,16 +9,26 @@ public class MenuManager : MonoBehaviour
       [SerializeField]  private GameObject play;
         [SerializeField]  private GameObject death;
           [SerializeField]  private GameObject victory;
-           private bool clickedOnce = false;
+    
 
     // Start is called before the first frame update
    
+ void start()
+    {
+            Time.timeScale = 0;
+           
+         }
+       
+
+
+
 
    
    public void PlayBtn()
     {
-      play.SetActive(true);
- 
+      play.SetActive(false);
+ Time.timeScale = 1;
+   
     }
 
     // Update is called once per frame
@@ -33,5 +43,5 @@ public class MenuManager : MonoBehaviour
     {
         death.SetActive(true);
     }
+
 }
-    
