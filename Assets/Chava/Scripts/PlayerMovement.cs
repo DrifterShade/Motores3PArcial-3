@@ -10,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Attack attack;
     [SerializeField] public bool hasKey;
     [SerializeField] private Animator anim;
+    [SerializeField] private GameObject door;
 
      public GameObject llave;
       public GameObject vicui;
@@ -76,8 +77,16 @@ public class PlayerMovement : MonoBehaviour
         if(collision.gameObject.CompareTag("Exit") && hasKey)
         {
             Debug.Log("Victoria");
+            StartCoroutine(finishGame());
             //Funcion de victoria
-             vicui.SetActive(true);
+            // vicui.SetActive(true);
         }
+    }
+
+    IEnumerator finishGame()
+    {
+        door.SetActive(false);
+        yield return new WaitForSeconds(4);
+        vicui.SetActive(true);
     }
 }

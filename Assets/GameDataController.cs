@@ -18,6 +18,10 @@ public class GameDataController : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI nameText;
 
+    [SerializeField] private MusicController music;
+
+    [SerializeField] private Camera mainCamera;
+
     private void Awake()
     {
         saveFile = Path.Combine(Application.persistentDataPath, "dataGame.json");
@@ -52,6 +56,8 @@ public class GameDataController : MonoBehaviour
             player.GetComponent<CollectableManager>().currentCollectables = gameData.currentCollectables;
             player.GetComponent<PlayerMovement>().hasKey = gameData.hasKey;
             MenuInicio.SetActive(false);
+            music.PlayMusic();
+            mainCamera.transform.position = new Vector3(-0.26f, -0.09f, -10);
 
 
             Debug.Log("Posición cargada: " + gameData.position);
