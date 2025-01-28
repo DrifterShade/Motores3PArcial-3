@@ -365,6 +365,9 @@ MonoBehaviour:
   moveSpeed: 5
   rb: {fileID: 1647511651}
   attack: {fileID: 0}
+  hasKey: 0
+  anim: {fileID: 1647511652}
+  llave: {fileID: 0}
 --- !u!212 &1647511649
 SpriteRenderer:
   m_ObjectHideFlags: 0

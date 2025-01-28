@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Attack attack;
     [SerializeField] public bool hasKey;
-    // [SerializeField] private Animator anim;
+    [SerializeField] private Animator anim;
 
      public GameObject llave;
 
@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         Movement();
-        // Animation();
+        Animation();
         attack.attackDirection(moveDirection);
 
         if (hasKey)
@@ -50,13 +50,13 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Direcci�n actual: " + moveDirection);
     }
-    /*
+    
     private void Animation()
     {
         anim.SetFloat("moveX", moveDirection.x);
         anim.SetFloat("moveY", moveDirection.y);
     }
-    */
+    
 
 
      private void OnTriggerEnter2D(Collider2D other)
