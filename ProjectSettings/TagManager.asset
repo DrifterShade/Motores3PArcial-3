@@ -15,6 +15,11 @@ TagManager:
   - cdown
   - downm1
   - upm1
+  - cleft
+  - cleftm1
+  - leftm1
+  - derder
+  - derecha1
   layers:
   - Default
   - TransparentFX
