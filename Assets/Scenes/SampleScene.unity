@@ -1911,6 +1911,7 @@ MonoBehaviour:
   play: {fileID: 233689763}
   death: {fileID: 1988702278}
   victory: {fileID: 761464607}
+  song: {fileID: 1062437192}
 --- !u!114 &258558314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13650,6 +13651,7 @@ MonoBehaviour:
   - {fileID: 15054756}
   - {fileID: 1086698997}
   derrotaui: {fileID: 1988702278}
+  song: {fileID: 1062437192}
 --- !u!114 &6327586823410696904
 MonoBehaviour:
   m_ObjectHideFlags: 0

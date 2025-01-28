@@ -12,7 +12,9 @@ public class HealthPlayer : MonoBehaviour
 
         [SerializeField]  private GameObject derrotaui;
 
-    
+         [SerializeField] private AudioSource song;
+
+   
 
     private void Update()
     {
@@ -37,6 +39,8 @@ public class HealthPlayer : MonoBehaviour
     {
         Debug.Log("Fallecido");
         derrotaui.SetActive(true);
+        song.Pause(); 
+
         //Aqui va lo que queramos que pase cuando muera, encender menus, destruir al player, etc
     }
 
@@ -70,20 +74,8 @@ public class HealthPlayer : MonoBehaviour
         
     }
     
-    public MusicController musicController;
+   
 
-    void Start()
-    {
-        musicController = FindObjectOfType<MusicController>();
-    }
-
-    void death()
-    {
-        if (musicController != null)
-        {
-            musicController.StopMusic();
-        }
-
-    }
+    
 
 }

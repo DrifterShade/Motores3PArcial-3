@@ -11,6 +11,7 @@ public class MenuManager : MonoBehaviour
           [SerializeField]  private GameObject victory;
     
 
+   [SerializeField] private AudioSource song;
     // Start is called before the first frame update
    
  void Start()
@@ -28,7 +29,7 @@ public class MenuManager : MonoBehaviour
     {
       play.SetActive(false);
       Time.timeScale = 1;
-      
+       song.Play(); 
    
     }
 
@@ -43,6 +44,7 @@ public class MenuManager : MonoBehaviour
      public void DeathBtn()
     {
         death.SetActive(true);
+         song.Pause(); 
     }
 
 }
