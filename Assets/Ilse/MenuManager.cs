@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
 
     // Start is called before the first frame update
    
- void start()
+ void Start()
     {
             Time.timeScale = 0;
            
@@ -27,7 +27,8 @@ public class MenuManager : MonoBehaviour
    public void PlayBtn()
     {
       play.SetActive(false);
- Time.timeScale = 1;
+      Time.timeScale = 1;
+      
    
     }
 

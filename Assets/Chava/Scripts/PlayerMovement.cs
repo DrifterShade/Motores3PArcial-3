@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator anim;
 
      public GameObject llave;
+      public GameObject vicui;
 
     private void Start()
     {
@@ -76,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("Victoria");
             //Funcion de victoria
+             vicui.SetActive(true);
         }
     }
 }
