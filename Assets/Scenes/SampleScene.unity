@@ -1146,6 +1146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 774deec01bd05fc4ebcd1be338f7f1f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
   play: {fileID: 0}
   death: {fileID: 1988702278}
   victory: {fileID: 761464607}
@@ -1333,7 +1334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &277762521
 RectTransform:
   m_ObjectHideFlags: 0
