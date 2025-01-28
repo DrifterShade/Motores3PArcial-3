@@ -21,6 +21,7 @@ TagManager:
   - derder
   - derecha1
   - key
+  - Exit
   layers:
   - Default
   - TransparentFX

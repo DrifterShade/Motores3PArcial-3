@@ -10,4 +10,8 @@ public class GameData
     public int healthPlayer;
 
     public int currentCollectables;
+
+    public string username;
+
+    public bool hasKey;
 }

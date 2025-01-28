@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using TMPro;
 
 public class GameDataController : MonoBehaviour
 {
@@ -11,26 +12,33 @@ public class GameDataController : MonoBehaviour
 
     [SerializeField] private GameData gameData = new GameData();
 
+    [SerializeField] private GameObject MenuInicio;
+
+    [SerializeField] private TMP_InputField nameInput;
+
+    [SerializeField] private TextMeshProUGUI nameText;
+
     private void Awake()
     {
         saveFile = Path.Combine(Application.persistentDataPath, "dataGame.json");
 
         player = GameObject.FindGameObjectWithTag("Player");
 
-        LoadData();
+        //setName();
+
+        //LoadData();
 
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            SaveData();
-        }
+
         if (Input.GetKeyDown(KeyCode.L))
         {
             LoadData();
         }
+
+        setName();
     }
 
     public void LoadData()
@@ -42,6 +50,9 @@ public class GameDataController : MonoBehaviour
             player.transform.position = gameData.position;
             player.GetComponent<HealthPlayer>().currentHealth = gameData.healthPlayer;
             player.GetComponent<CollectableManager>().currentCollectables = gameData.currentCollectables;
+            player.GetComponent<PlayerMovement>().hasKey = gameData.hasKey;
+            MenuInicio.SetActive(false);
+
 
             Debug.Log("Posición cargada: " + gameData.position);
         }
@@ -57,7 +68,9 @@ public class GameDataController : MonoBehaviour
         {
             position = player.transform.position,
             healthPlayer = player.GetComponent<HealthPlayer>().currentHealth,
-            currentCollectables = player.GetComponent<CollectableManager>().currentCollectables
+            currentCollectables = player.GetComponent<CollectableManager>().currentCollectables,
+            hasKey = player.GetComponent<PlayerMovement>().hasKey,
+            username = nameInput.text
 
         };
 
@@ -66,5 +79,17 @@ public class GameDataController : MonoBehaviour
 
         Debug.Log("Archivo guardado en: " + saveFile);
     }
+
+
+    public void setName()
+    {
+        if (File.Exists(saveFile))
+        {
+            string content = File.ReadAllText(saveFile);
+            gameData = JsonUtility.FromJson<GameData>(content);
+            nameText.text = gameData.username;
+        }
+    }
+
 }
 

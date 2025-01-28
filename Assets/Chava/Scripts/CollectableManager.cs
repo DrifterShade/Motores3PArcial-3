@@ -11,7 +11,7 @@ public class CollectableManager : MonoBehaviour
 
     private void Update()
     {
-        TMProCurrentCollectables.text = "Current Collectables" + currentCollectables.ToString();
+        TMProCurrentCollectables.text = "Current Collectables: " + currentCollectables.ToString();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
