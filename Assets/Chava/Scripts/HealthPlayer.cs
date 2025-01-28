@@ -69,5 +69,21 @@ public class HealthPlayer : MonoBehaviour
     {
         
     }
+    
+    public MusicController musicController;
+
+    void Start()
+    {
+        musicController = FindObjectOfType<MusicController>();
+    }
+
+    void death()
+    {
+        if (musicController != null)
+        {
+            musicController.StopMusic();
+        }
+
+    }
 
 }
