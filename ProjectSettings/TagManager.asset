@@ -20,6 +20,7 @@ TagManager:
   - leftm1
   - derder
   - derecha1
+  - key
   layers:
   - Default
   - TransparentFX

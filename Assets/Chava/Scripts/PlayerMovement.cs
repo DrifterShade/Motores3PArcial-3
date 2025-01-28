@@ -10,6 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Attack attack;
     // [SerializeField] private Animator anim;
 
+     public GameObject llave;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -33,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void CheckDirection()
     {
-        Debug.Log("Dirección actual: " + moveDirection);
+        Debug.Log("Direcciï¿½n actual: " + moveDirection);
     }
     /*
     private void Animation()
@@ -42,4 +44,16 @@ public class PlayerMovement : MonoBehaviour
         anim.SetFloat("moveY", moveDirection.y);
     }
     */
+
+
+     private void OnTriggerEnter2D(Collider2D other)
+{
+            if (other.tag == "key")
+         {
+            llave.SetActive(true);
+           
+            Destroy(other.gameObject);
+            
+         }
+}
 }
